@@ -3,6 +3,7 @@ package com.omega_r.omegakeyboard;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements SoftKeyboard.Listener {

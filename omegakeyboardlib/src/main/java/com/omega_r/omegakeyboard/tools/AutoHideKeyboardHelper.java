@@ -13,8 +13,9 @@ import android.widget.EditText;
 public class AutoHideKeyboardHelper {
 
     public boolean dispatchTouchEventForDialog(MotionEvent ev, Dialog dialog, final boolean consumed,
-                                                Activity activity, boolean needClearFocus) {
-        if (ev.getAction() == MotionEvent.ACTION_UP) {
+                                               Activity activity, boolean needClearFocus) {
+        if (ev.getAction() == MotionEvent.ACTION_UP
+                && ev.getAction() != MotionEvent.ACTION_SCROLL) {
             final View view = dialog.getWindow().getCurrentFocus();
             if (view != null) {
                 final View viewTmp;
@@ -47,8 +48,9 @@ public class AutoHideKeyboardHelper {
     }
 
     public boolean dispatchTouchEventForActivity(MotionEvent ev, final boolean consumed,
-                                                  Activity activity, boolean needClearFocus) {
-        if (ev.getAction() == MotionEvent.ACTION_UP) {
+                                                 Activity activity, boolean needClearFocus) {
+        if (ev.getAction() == MotionEvent.ACTION_UP
+                && ev.getAction() != MotionEvent.ACTION_SCROLL) {
             final View view = activity.getCurrentFocus();
             if (view != null) {
                 final View viewTmp = activity.getCurrentFocus();
