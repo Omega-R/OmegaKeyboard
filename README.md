@@ -3,6 +3,10 @@
 # OmegaKeyboard
 Keyboard with additional functionality, allow adding listener.
 
+<p align="center">
+    <img src="/images/omega_keyboard.gif?raw=true" width="300" height="533" />
+</p>
+
 # Installation
 To get a Git project into your build:
 
