@@ -22,7 +22,7 @@ allprojects {
 **Step 2.** Add the dependency
 ```
 dependencies {
-    compile 'com.github.Omega-R:OmegaKeyboard:v1.0'
+    implementation 'com.github.Omega-R:OmegaKeyboard:v1.0'
 }
 ```
 
