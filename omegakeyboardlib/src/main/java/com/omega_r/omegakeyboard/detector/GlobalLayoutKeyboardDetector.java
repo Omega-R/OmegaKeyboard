@@ -11,7 +11,6 @@ public class GlobalLayoutKeyboardDetector extends BaseDetecor
 
     private View mContentView;
     private int mInitialValue;
-    private boolean mHasSentInitialAction;
     private boolean mIsKeyboardShown;
 
     private Rect mRect = new Rect();
@@ -39,13 +38,12 @@ public class GlobalLayoutKeyboardDetector extends BaseDetecor
         } else {
             int value = getValue();
             if (mInitialValue > value) {
-                if (!mHasSentInitialAction || !mIsKeyboardShown) {
+                if (!mIsKeyboardShown) {
                     mIsKeyboardShown = true;
                     onKeyboardChange(true);
                 }
-
             } else {
-                if (!mHasSentInitialAction || mIsKeyboardShown) {
+                if (mIsKeyboardShown) {
                     mIsKeyboardShown = false;
                     mContentView.post(new Runnable() {
                         @Override
@@ -55,7 +53,6 @@ public class GlobalLayoutKeyboardDetector extends BaseDetecor
                     });
                 }
             }
-            mHasSentInitialAction = true;
         }
     }
 

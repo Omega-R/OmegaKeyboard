@@ -1,10 +1,12 @@
-package com.omega_r.omegakeyboard;
+package com.omega_r.omegakeyboard_sample;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.omega_r.omegakeyboard.SoftKeyboard;
 
 public class MainActivity extends AppCompatActivity implements SoftKeyboard.Listener {
 
